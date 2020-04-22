@@ -12,7 +12,9 @@
     },
     "devDependencies": {
         "@stencil/core": "^1.12.2",
-        "@stencil/router": "^1.0.1"
+        "@stencil/router": "^1.0.1",
+        "@types/jest": "^25.2.1",
+        "puppeteer": "^3.0.1"
     },
     "license": "MIT"
 }
