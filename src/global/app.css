@@ -7,4 +7,8 @@
 
   Any global CSS variables should also be applied here.
 */
-
+body {
+    font-family: monospace;
+    margin: 39px auto;
+    max-width: 800px;
+}

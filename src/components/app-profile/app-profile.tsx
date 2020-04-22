@@ -11,9 +11,13 @@ export class AppProfile {
 
     normalize(name: string): string {
         if (name) {
-            return (
-                name.substr(0, 1).toUpperCase() + name.substr(1).toLowerCase()
-            );
+            return name
+                .split("-")
+                .map(
+                    w =>
+                        w.substr(0, 1).toUpperCase() + w.substr(1).toLowerCase()
+                )
+                .join(" ");
         }
         return "";
     }
@@ -27,6 +31,10 @@ export class AppProfile {
                         {this.normalize(this.match.params.name)}. My name was
                         passed in through a route param!
                     </p>
+                    <img
+                        src="https://placekitten.com/500/500"
+                        alt="{this.match.params.name}"
+                    />
                 </div>
             );
         }
